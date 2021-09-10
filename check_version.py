@@ -1,12 +1,8 @@
 import requests
-import inspect
 
 
-def get_file(filename="QUESTION8.py"):
-    URL="https://github.com/Amos-lii/404/blob/main/check_version.py"
-    down = requests.get(URL)
-    with open(filename, "wb") as file:
-        file.write(down.content
-                   )
-sourcecode=inspect.getsource(get_file)
+URL="https://github.com/Amos-lii/404/blob/main/check_version.py"
+res=requests.get(URL)
+print(res)
+sourcecode=requests.get("https://github.com/Amos-lii/404/blob/main/check_version.py")
 print(sourcecode)
